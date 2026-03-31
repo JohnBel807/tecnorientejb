@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tecnoriente JB - Soluciones avanzadas en Inteligencia Artificial, Tokenización de Activos, Trading Bots y Big Data. Liderada por John Beltrán." />
+  <meta name="keywords" content="Inteligencia Artificial, Tokenización, Trading Bots, Big Data, Blockchain, Colombia, Boyacá, Santander, Chatbots, Automatización" />
+  <meta name="author" content="John Beltrán - Tecnoriente JB" />
+  <meta property="og:title" content="Tecnoriente JB | IA · Blockchain · Trading Bots" />
+  <meta property="og:description" content="Impulsamos tu negocio al siguiente nivel con IA y Blockchain. Soluciones en Tokenización, Trading Bots y Automatización." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  <title>Tecnoriente JB | IA · Blockchain · Trading Bots</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CANVAS PARTICLES -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- CURSOR -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- HEADER -->
+  <header id="header">
+    <nav class="nav-container">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <polygon points="18,2 34,10 34,26 18,34 2,26 2,10" stroke="var(--neon)" stroke-width="1.5" fill="none"/>
+            <polygon points="18,8 28,13 28,23 18,28 8,23 8,13" fill="var(--neon)" opacity="0.15"/>
+            <circle cx="18" cy="18" r="4" fill="var(--neon)"/>
+            <line x1="18" y1="2" x2="18" y2="8" stroke="var(--neon)" stroke-width="1.5"/>
+            <line x1="18" y1="28" x2="18" y2="34" stroke="var(--neon)" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <span class="logo-text">TECNORIENTE<span class="logo-accent">JB</span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+      <a href="https://wa.me/573116861370?text=Hola%2C%20quiero%20agendar%20una%20consultor%C3%ADa" target="_blank" class="cta-btn">
+        <span>Agendar Consultoría</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-scanline"></div>
+
+    <!-- AI Dashboard animado -->
+    <div class="ai-dashboard">
+      <div class="dash-card dash-1">
+        <div class="dash-label">AI Performance</div>
+        <div class="dash-value neon-text" id="ai-perf">98.7<span>%</span></div>
+        <div class="dash-bar"><div class="dash-fill" style="width:98%"></div></div>
+      </div>
+      <div class="dash-card dash-2">
+        <div class="dash-label">Tokens Procesados</div>
+        <div class="dash-value" id="tokens-val">2.4M</div>
+        <div class="mini-chart" id="mini-chart"></div>
+      </div>
+      <div class="dash-card dash-3">
+        <div class="dash-label">Bot Trading P&L</div>
+        <div class="dash-value green-text">+$12,450</div>
+        <div class="dash-trend">▲ 34.2% hoy</div>
+      </div>
+      <div class="dash-card dash-4">
+        <div class="dash-label">Nodos Blockchain</div>
+        <div class="dash-value neon-text" id="nodes-val">147</div>
+        <div class="node-dots" id="node-dots"></div>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-tag reveal-item">
+        <div class="tag-dot"></div>
+        <span>Sistema activo · Colombia 2025</span>
+      </div>
+      <h1 class="hero-title reveal-item">
+        Impulsamos tu negocio<br/>
+        <span class="gradient-text">al siguiente nivel</span><br/>
+        con <span class="neon-outline">IA</span> y <span class="neon-outline">Blockchain</span>
+      </h1>
+      <p class="hero-sub reveal-item">
+        Soluciones avanzadas en Tokenización, Trading Bots y Automatización.<br/>
+        Escala sin límites. Opera sin fricciones. Innova sin precedentes.
+      </p>
+      <div class="hero-ctas reveal-item">
+        <a href="https://wa.me/573116861370?text=Hola%2C%20quiero%20agendar%20una%20consultor%C3%ADa" target="_blank" class="btn-primary">
+          <span>Comenzar Ahora</span>
+          <div class="btn-glow"></div>
+        </a>
+        <a href="#portfolio" class="btn-ghost">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          Ver Demo
+        </a>
+      </div>
+      <div class="hero-stats reveal-item">
+        <div class="stat"><span class="stat-num">150+</span><span class="stat-label">Proyectos</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Satisfacción</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-num">12+</span><span class="stat-label">Países</span></div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>IA Generativa</span><span class="sep">◆</span>
+      <span>Blockchain</span><span class="sep">◆</span>
+      <span>Tokenización</span><span class="sep">◆</span>
+      <span>Trading Bots</span><span class="sep">◆</span>
+      <span>Big Data</span><span class="sep">◆</span>
+      <span>Automatización</span><span class="sep">◆</span>
+      <span>Chatbots IA</span><span class="sep">◆</span>
+      <span>Web3</span><span class="sep">◆</span>
+      <span>Smart Contracts</span><span class="sep">◆</span>
+      <span>Machine Learning</span><span class="sep">◆</span>
+      <span>IA Generativa</span><span class="sep">◆</span>
+      <span>Blockchain</span><span class="sep">◆</span>
+      <span>Tokenización</span><span class="sep">◆</span>
+      <span>Trading Bots</span><span class="sep">◆</span>
+      <span>Big Data</span><span class="sep">◆</span>
+      <span>Automatización</span><span class="sep">◆</span>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section class="section" id="servicios">
+    <div class="section-header reveal-up">
+      <div class="section-tag">// SERVICIOS</div>
+      <h2 class="section-title">Tecnología que <span class="gradient-text">transforma</span></h2>
+      <p class="section-sub">Cada solución diseñada para escalar tu operación sin aumentar la nómina.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card reveal-up" style="--delay:0s">
+        <div class="card-glow"></div>
+        <div class="card-number">01</div>
+        <div class="card-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon)" stroke-width="1.5">
+            <path d="M12 2a10 10 0 110 20 10 10 0 010-20z"/><path d="M12 6v6l4 2"/>
+            <circle cx="12" cy="12" r="3" fill="var(--neon)" opacity="0.3"/>
+          </svg>
+        </div>
+        <h3>Inteligencia Artificial<br/>&amp; Chatbots</h3>
+        <p>Agentes que no solo hablan, sino que <strong>ejecutan</strong>. Gestión de pedidos, logística, ventas y atención al cliente 24/7 con IA que aprende de tu negocio.</p>
+        <div class="card-tags">
+          <span>GPT-4</span><span>Agentes IA</span><span>NLP</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <div class="service-card reveal-up featured-card" style="--delay:0.1s">
+        <div class="card-glow featured-glow"></div>
+        <div class="featured-badge">⭐ Más Solicitado</div>
+        <div class="card-number">02</div>
+        <div class="card-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon)" stroke-width="1.5">
+            <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
+            <circle cx="12" cy="16" r="1.5" fill="var(--neon)"/>
+          </svg>
+        </div>
+        <h3>Tokenización<br/>de Activos</h3>
+        <p>Especialistas en Santander y Boyacá. Convertimos inmuebles, empresas y activos físicos en tokens digitales con respaldo jurídico y tecnología blockchain.</p>
+        <div class="card-tags">
+          <span>Web3</span><span>Smart Contracts</span><span>RWA</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <div class="service-card reveal-up" style="--delay:0.2s">
+        <div class="card-glow"></div>
+        <div class="card-number">03</div>
+        <div class="card-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon)" stroke-width="1.5">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <h3>Bots de Trading<br/>&amp; Scrapping</h3>
+        <p>Automatización de mercados financieros con algoritmos cuantitativos. Extracción de datos inteligente para inteligencia competitiva en tiempo real.</p>
+        <div class="card-tags">
+          <span>Algorítmico</span><span>Forex</span><span>Crypto</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <div class="service-card reveal-up" style="--delay:0.3s">
+        <div class="card-glow"></div>
+        <div class="card-number">04</div>
+        <div class="card-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon)" stroke-width="1.5">
+            <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+          </svg>
+        </div>
+        <h3>Big Data<br/>&amp; Analytics</h3>
+        <p>Transformamos datos en decisiones estratégicas. Dashboards en tiempo real, modelos predictivos y análisis competitivo para líderes empresariales.</p>
+        <div class="card-tags">
+          <span>ML</span><span>Python</span><span>Power BI</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <div class="service-card reveal-up" style="--delay:0.4s">
+        <div class="card-glow"></div>
+        <div class="card-number">05</div>
+        <div class="card-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon)" stroke-width="1.5">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <h3>Capacitación<br/>Corporativa</h3>
+        <p>Formación a medida para empresas y personas en nuevas tecnologías. Desde fundamentos de IA hasta implementación avanzada de blockchain en tu sector.</p>
+        <div class="card-tags">
+          <span>Workshops</span><span>Certificaciones</span><span>In-company</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <div class="service-card cta-card reveal-up" style="--delay:0.5s">
+        <div class="card-glow"></div>
+        <div class="cta-card-inner">
+          <div class="cta-icon">⚡</div>
+          <h3>¿Tienes un reto tecnológico?</h3>
+          <p>Hablemos de cómo la IA puede multiplicar tu ROI en menos de 90 días.</p>
+          <a href="https://wa.me/573116861370" target="_blank" class="btn-primary btn-sm">
+            <span>Consulta Gratis</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOBRE NOSOTROS -->
+  <section class="section about-section" id="nosotros">
+    <div class="about-grid">
+      <div class="about-media reveal-left">
+        <div class="about-img-stack">
+          <div class="about-img-main">
+            <img src="77529474-b4f4-49b5-8578-24d723509fc8.jpg" alt="John Beltrán - Tecnoriente JB" loading="lazy"/>
+            <div class="img-overlay"></div>
+          </div>
+          <div class="about-img-accent">
+            <img src="d8fae7ce-4907-4921-acef-792993c4c108.jpg" alt="Equipo Tecnoriente" loading="lazy"/>
+          </div>
+          <div class="floating-badge">
+            <div class="badge-icon">🏆</div>
+            <div class="badge-text">
+              <strong>John Beltrán</strong>
+              <span>CEO &amp; Founder</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-content reveal-right">
+        <div class="section-tag">// SOBRE NOSOTROS</div>
+        <h2 class="section-title">Tecnología con <span class="gradient-text">propósito</span></h2>
+        <p class="about-lead">Somos un equipo de ingenieros, científicos de datos y estrategas digitales liderados por <strong>John Beltrán</strong>, con más de una década conectando empresas colombianas con las tecnologías del futuro.</p>
+        <div class="about-pillars">
+          <div class="pillar">
+            <div class="pillar-icon neon-text">◈</div>
+            <div>
+              <strong>Sin límites de escala</strong>
+              <p>Multiplica tu operación sin aumentar la nómina. Nuestros sistemas trabajan 24/7.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon neon-text">◈</div>
+            <div>
+              <strong>Regionalidad + Tecnología</strong>
+              <p>Especializados en Santander y Boyacá, con alcance nacional e internacional.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon neon-text">◈</div>
+            <div>
+              <strong>Resultados medibles</strong>
+              <p>Cada proyecto con KPIs claros, ROI transparente y reportes en tiempo real.</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-ctas">
+          <a href="https://www.linkedin.com/in/johnbelroa1980" target="_blank" class="btn-ghost">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn de John
+          </a>
+          <a href="https://wa.me/573116861370" target="_blank" class="btn-primary">
+            Hablemos →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO / MULTIMEDIA -->
+  <section class="section" id="portfolio">
+    <div class="section-header reveal-up">
+      <div class="section-tag">// PORTFOLIO</div>
+      <h2 class="section-title">Casos de <span class="gradient-text">éxito</span></h2>
+      <p class="section-sub">Mira nuestros proyectos en acción. Tecnología real, resultados reales.</p>
+    </div>
+
+    <div class="portfolio-tabs reveal-up">
+      <button class="tab-btn active" data-tab="videos">Videos</button>
+      <button class="tab-btn" data-tab="fotos">Fotos</button>
+    </div>
+
+    <div class="portfolio-content" id="tab-videos">
+      <div class="video-carousel">
+        <div class="video-slide active">
+          <div class="video-wrapper">
+            <video controls poster="2848e857-adca-408d-b31d-322564cedcae.webp" preload="none">
+              <source src="4b8c3f49-2f83-4fc7-918b-3f0dfbadba4a.mp4" type="video/mp4"/>
+            </video>
+            <div class="video-label">
+              <span class="vid-tag">Trading</span>
+              <strong>Bot de Trading Automatizado</strong>
+            </div>
+          </div>
+        </div>
+        <div class="video-slide">
+          <div class="video-wrapper">
+            <video controls poster="8712610c-15e8-45f7-b4dc-98b9672ef9f0.webp" preload="none">
+              <source src="e77d413a-578d-4952-b989-223591dc8bd4.mp4" type="video/mp4"/>
+            </video>
+            <div class="video-label">
+              <span class="vid-tag">Blockchain</span>
+              <strong>Tokenización de Activos Reales</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="prev-vid">←</button>
+        <div class="carousel-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+        </div>
+        <button class="carousel-btn" id="next-vid">→</button>
+      </div>
+    </div>
+
+    <div class="portfolio-content hidden" id="tab-fotos">
+      <div class="photo-grid">
+        <div class="photo-item reveal-up">
+          <img src="04a20ec3-5d7a-410c-98fb-011a343a9eff.jpg" alt="Análisis de mercados financieros" loading="lazy"/>
+          <div class="photo-overlay"><span>Trading Analytics</span></div>
+        </div>
+        <div class="photo-item reveal-up">
+          <img src="2848e857-adca-408d-b31d-322564cedcae.webp" alt="Dashboard IA" loading="lazy"/>
+          <div class="photo-overlay"><span>Dashboard IA</span></div>
+        </div>
+        <div class="photo-item reveal-up">
+          <img src="8712610c-15e8-45f7-b4dc-98b9672ef9f0.webp" alt="Tokenización" loading="lazy"/>
+          <div class="photo-overlay"><span>Tokenización</span></div>
+        </div>
+        <div class="photo-item reveal-up">
+          <img src="f16a085d-1e96-4138-adbd-1f604ba14fca.jpg" alt="El Oficio de Imaginar" loading="lazy"/>
+          <div class="photo-overlay"><span>Capacitación</span></div>
+        </div>
+        <div class="photo-item reveal-up">
+          <img src="77529474-b4f4-49b5-8578-24d723509fc8.jpg" alt="Trabajo remoto" loading="lazy"/>
+          <div class="photo-overlay"><span>Work Anywhere</span></div>
+        </div>
+        <div class="photo-item reveal-up">
+          <img src="d8fae7ce-4907-4921-acef-792993c4c108.jpg" alt="Equipo de desarrollo" loading="lazy"/>
+          <div class="photo-overlay"><span>Dev Team</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section contact-section" id="contacto">
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <div class="section-tag">// CONTACTO</div>
+        <h2 class="section-title">Comienza tu<br/><span class="gradient-text">transformación</span></h2>
+        <p>Estamos listos para escalar tu negocio. Un mensaje puede cambiarlo todo.</p>
+        <div class="contact-channels">
+          <a href="https://wa.me/573116861370?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20sus%20servicios" target="_blank" class="channel-item whatsapp">
+            <div class="ch-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div>
+              <strong>WhatsApp</strong>
+              <span>311 686 1370</span>
+            </div>
+          </a>
+          <a href="https://www.facebook.com/MiTecnoYa" target="_blank" class="channel-item facebook">
+            <div class="ch-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </div>
+            <div>
+              <strong>Facebook</strong>
+              <span>MiTecnoYa</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/johnbelroa1980" target="_blank" class="channel-item linkedin">
+            <div class="ch-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div>
+              <strong>LinkedIn</strong>
+              <span>John Beltrán</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper reveal-right">
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre *</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required/>
+              <span class="error-msg">Por favor ingresa tu nombre.</span>
+            </div>
+            <div class="form-group">
+              <label for="empresa">Empresa</label>
+              <input type="text" id="empresa" name="empresa" placeholder="Tu empresa"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="correo@empresa.com" required/>
+            <span class="error-msg">Ingresa un email válido.</span>
+          </div>
+          <div class="form-group">
+            <label for="servicio">Servicio de interés</label>
+            <select id="servicio" name="servicio">
+              <option value="">Seleccionar...</option>
+              <option>Inteligencia Artificial &amp; Chatbots</option>
+              <option>Tokenización de Activos</option>
+              <option>Bots de Trading</option>
+              <option>Big Data &amp; Analytics</option>
+              <option>Capacitación Corporativa</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos sobre tu proyecto o necesidad..." required></textarea>
+            <span class="error-msg">Por favor escribe tu mensaje.</span>
+          </div>
+          <button type="submit" class="btn-primary btn-full">
+            <span id="form-btn-text">Enviar Mensaje</span>
+            <div class="btn-glow"></div>
+          </button>
+          <div class="form-success hidden" id="form-success">
+            <span>✅ Mensaje enviado. ¡Nos pondremos en contacto pronto!</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">
+            <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+              <polygon points="18,2 34,10 34,26 18,34 2,26 2,10" stroke="var(--neon)" stroke-width="1.5" fill="none"/>
+              <circle cx="18" cy="18" r="4" fill="var(--neon)"/>
+            </svg>
+          </div>
+          <span class="logo-text">TECNORIENTE<span class="logo-accent">JB</span></span>
+        </div>
+        <p>Impulsando negocios con IA, Blockchain y tecnología de punta. Colombia y el mundo.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <strong>Servicios</strong>
+          <a href="#servicios">IA &amp; Chatbots</a>
+          <a href="#servicios">Tokenización</a>
+          <a href="#servicios">Trading Bots</a>
+          <a href="#servicios">Big Data</a>
+        </div>
+        <div class="footer-col">
+          <strong>Empresa</strong>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contacto">Contacto</a>
+          <a href="https://www.linkedin.com/in/johnbelroa1980" target="_blank">LinkedIn</a>
+        </div>
+        <div class="footer-col">
+          <strong>Contacto</strong>
+          <a href="https://wa.me/573116861370" target="_blank">311 686 1370</a>
+          <a href="https://www.facebook.com/MiTecnoYa" target="_blank">Facebook</a>
+          <span>Santander &amp; Boyacá, CO</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Tecnoriente JB · Todos los derechos reservados.</span>
+      <span>Diseñado con IA · Potenciado por Blockchain</span>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOTANTE -->
+  <a href="https://wa.me/573116861370?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wa-tooltip">¡Escríbenos!</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
